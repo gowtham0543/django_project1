@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+
+{% block title %}Blog Posts{% endblock %}
+
+{% block content %}
+    <h2>Blog Posts</h2>
+    <a href="{% url 'post_add' %}">Add Post</a>
+    <form method="POST" action="{% url 'search_view' %}">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                &nbsp;&nbsp;
+                <a href="{% url 'post_edit' post.id %}">Edit</a>
+                &nbsp;&nbsp;
+                <a href="{% url 'post_delete' post.id %}">Delete</a>
+                &nbsp;&nbsp;
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

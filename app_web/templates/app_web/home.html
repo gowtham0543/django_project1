@@ -1,8 +1,16 @@
 {% extends './base_bs.html' %}
-
+{% load static %}
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
+<style>
+    .no_decoration {
+        text-decoration: none;            
+    }
+    .space_link {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+</style>
 <main>
     <div class="container-fluid">
      <div class="row">
@@ -12,7 +20,7 @@
          <div class="col-md-6 d-flex justify-content-end align-items-center my-1">
              <b class="">Home</b>
              &nbsp;&nbsp;
-             <a href="" class="no_decoration space_link">Blog</a>
+             <a href="{% url 'post_list' %}" class="no_decoration space_link">Blog</a>
              <a href="" class="no_decoration space_link">About Us</a>
              <a href="" class="no_decoration space_link">Contact Us</a>
              &nbsp;&nbsp;
@@ -52,7 +60,7 @@
            <!-- CARD -->
            <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/python1.png" alt="">
+               <img src="{% static 'images/python1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn Python Basics and Experience with Python Foundations Course
@@ -72,7 +80,7 @@
             <!-- CARD -->
             <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/django1.png" alt="">
+               <img src="{% static 'images/django1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn Django Basics and Experience with Django Foundations Course
@@ -91,7 +99,7 @@
            <!-- CARD -->
            <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/mysql1.png" alt="">
+               <img src="{% static 'images/mysql1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn MYSQL Basics and Experience with MYSQL Foundations Course
@@ -111,7 +119,7 @@
             <!-- CARD -->
             <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/html1.png" alt="">
+               <img src="{% static 'images/html1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn HTML Basics and Experience with HTML Foundations Course
@@ -131,7 +139,7 @@
             <!-- CARD -->
             <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/css1.png" alt="">
+               <img src="{% static 'images/css1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn CSS Basics and Experience with CSS Foundations Course
@@ -151,7 +159,7 @@
             <!-- CARD -->
             <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/js1.png" alt="">
+               <img src="{% static 'images/js1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn Javascript Basics and Experience with Javascript Foundations Course
@@ -170,7 +178,7 @@
             <!-- CARD -->
             <div class="col">            
              <div class="card shadow-sm">
-               <img src="./images/ORM1.png" alt="">
+               <img src="{% static 'images/ORM1.png' %}" alt="">
                <div class="card-body">
                  <p class="card-text">
                    Learn Object Relational Mapping and Experience with ORM Foundations Course
@@ -189,7 +197,7 @@
              <!-- CARD -->
              <div class="col">            
                <div class="card shadow-sm">
-                 <img src="./images/Python_Fullstack1.png" alt="">
+                 <img src="{% static 'images/Python_Fullstack1.png' %}" alt="">
                  <div class="card-body">
                    <p class="card-text">
                      Learn Full Stack Web Development and Experience with Full Stack Foundations Course
@@ -209,7 +217,7 @@
              <!-- CARD -->
              <div class="col">            
                <div class="card shadow-sm">
-                 <img src="./images/tfd1.png" alt="">
+                 <img src="{% static 'images/tfd1.png' %}" alt="">
                  <div class="card-body">
                    <p class="card-text">
                      Learn Test First Development and Experience with Python-TFD Foundations Course
